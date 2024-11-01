@@ -1,21 +1,25 @@
 function showSection(sectionId) {
-    const sections = ['inicio', 'descargas', 'renders', 'plugins', 'fondos', 'sonidos'];
+    const sections = ['inicio', 'descargas', 'materiales', 'renders', 'fondos', 'sonidos', 'plugins'];
     
-    // Asegúrate de que el ID proporcionado sea válido
-    if (!sections.includes(sectionId)) {
-        sectionId = 'inicio'; // Muestra "inicio" si el ID no es válido
+    // Si se selecciona "Materiales", no oculta las subcategorías
+    if (sectionId === 'materiales') {
+        document.getElementById('renders').classList.remove('hidden');
+        document.getElementById('fondos').classList.remove('hidden');
+        document.getElementById('sonidos').classList.remove('hidden');
+    } else {
+        // Oculta todas las secciones
+        sections.forEach(id => {
+            document.getElementById(id).classList.add('hidden');
+        });
+        // Muestra la sección seleccionada
+        document.getElementById(sectionId).classList.remove('hidden');
     }
-    
-    // Oculta todas las secciones excepto la seleccionada
-    sections.forEach(id => {
-        document.getElementById(id).classList.toggle('hidden', id !== sectionId);
-    });
     
     // Actualiza la URL sin recargar la página
     history.pushState({section: sectionId}, '', `/${sectionId}`);
 }
 
-// Escucha el evento de navegación para manejar los cambios de URL
+// Escucha el evento de retroceso del navegador
 window.onpopstate = function(event) {
     if (event.state && event.state.section) {
         showSection(event.state.section);
