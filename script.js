@@ -1,5 +1,9 @@
 function showSection(sectionId) {
     const sections = ['inicio', 'descargas', 'materiales', 'renders', 'fondos', 'sonidos', 'plugins'];
+
+if (!sections.includes(sectionId)) {
+        sectionId = 'inicio'; // Muestra "inicio" si el ID no es válido
+    }
     
     // Si se selecciona "Materiales", no oculta las subcategorías
     if (sectionId === 'materiales') {
