@@ -3,6 +3,7 @@ function showSection(sectionId) {
 
 if (!sections.includes(sectionId)) {
         sectionId = 'inicio'; // Muestra "inicio" si el ID no es válido
+        sectionId = 'descargas';
     }
 
 // Carga inicial de la página según la URL
