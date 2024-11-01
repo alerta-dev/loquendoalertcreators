@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Imagenes/favicon.png" sizes="32x32" />
+    <link rel="stylesheet" href="styles.css">
+    <title>LoquendoAlertCreators</title>
+</head>
+<body>
+    <div class="navbar">
+        <a onclick="showSection('inicio')">Inicio</a>
+        <a onclick="showSection('descargas')">Programas</a>
+        <a onclick="showSection('plugins')">Plugins</a>
+        <a onclick="showSection('renders')">Renders</a>
+        <a onclick="showSection('fondos')">Fondos</a>
+        <a onclick="showSection('sonidos')">Sonidos</a>
+    </div>
+
+    <!-- Sección de Bienvenida -->
+    <div id="inicio" class="container">
+        <div class="welcome-container">
+            <div class="welcome-text">
+                <h1 class="welcome">¡Bienvenido!</h1>
+                <p>Loquendo Alert Creators es la página por excelencia de la comunidad loquendera para descargar tus archivos.</p>
+                <div class="info-section">
+                    <h2>Información</h2>
+                    <p>Aquí puedes encontrar todos los recursos necesarios para crear tus videos. Soporte directo en el servidor de Loquendo Alert.</p>
+                    <a href="https://discord.com/invite/Y2VUgTE">Discord</a>
+                    <a href="https://www.youtube.com/@loquendoalert9590">YouTube</a>
+                    <a href="https://www.facebook.com/LoquendoAlert/">Facebook</a>
+                </div>
+            </div>
+            <div class="welcome-image">
+                <img src="Imagenes/bievenidos.png" alt="Imagen de Bienvenida">
+            </div>
+        </div>
+    </div>
+
+    <!-- Resto de secciones (ejemplo para una sección) -->
+    <div id="descargas" class="container hidden">
+        <!-- Ejemplo de contenido -->
+        <div class="item">
+            <img src="Imagenes/PhotoshopLogo.png" width="100" height="100">
+            <span>Photoshop CS6</span>
+            <a href="https://mega.nz/file/19JAjKwD#lEr9BI8gCuJTvlxzwXPGlErIo1_sQZgFGqoLA2sEniw">Descargar</a>
+        </div>
+        <!-- Agrega más elementos aquí -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
