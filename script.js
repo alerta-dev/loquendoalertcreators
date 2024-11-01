@@ -4,6 +4,13 @@ function showSection(sectionId) {
 if (!sections.includes(sectionId)) {
         sectionId = 'inicio'; // Muestra "inicio" si el ID no es válido
     }
+
+// Carga inicial de la página según la URL
+window.onload = function() {
+    const currentSection = window.location.pathname.replace('/', '') || 'inicio';
+    showSection(currentSection);
+};
+
     
     // Si se selecciona "Materiales", no oculta las subcategorías
     if (sectionId === 'materiales') {
@@ -32,8 +39,3 @@ window.onpopstate = function(event) {
     }
 };
 
-// Carga inicial de la página según la URL
-window.onload = function() {
-    const currentSection = window.location.pathname.replace('/', '') || 'inicio';
-    showSection(currentSection);
-};
